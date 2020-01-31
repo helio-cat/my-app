@@ -1,6 +1,8 @@
 <template>
   <div class="projects">
-    <h1>This is an about page</h1>
-    <p>Testing Git commit</p>
+    <h1 class="subheading grey--text">Projects</h1>
+    <v-container class="my-5">
+      content
+    </v-container>
   </div>
 </template>
