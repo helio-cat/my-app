@@ -1,5 +1,6 @@
 <template>
   <div class="projects">
     <h1>This is an about page</h1>
+    <p>Testing Git commit</p>
   </div>
 </template>

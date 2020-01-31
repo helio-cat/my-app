@@ -10,11 +10,6 @@
           <v-btn icon>
               <v-icon>mdi-alien</v-icon>
           </v-btn>
-          
-
-          <v-btn icon>
-              <v-icon>mdi-heart</v-icon>
-          </v-btn>
 
           <v-btn icon>
               <v-icon>mdi-dots-vertical</v-icon>
