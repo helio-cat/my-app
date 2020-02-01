@@ -8,9 +8,11 @@ export default new Vuetify({
     theme: {
         themes: {
             light: {
+                
                 primary: colors.teal.lighten4, // #E53935
                 secondary: colors.blueGrey.darken3, // #FFCDD2
                 accent: colors.green.accent2, // #3F51B5
+                
             },
             dark: {
                 primary: colors.blueGrey.darken3, // #E53935
@@ -20,6 +22,9 @@ export default new Vuetify({
             success: colors.green.lighten1,
             info: colors.green.lighten5,
             error: colors.red.lighten2,
+            complete: colors.green.lighten2,
+            ongoing: colors.teal.lighten5,
+            overdue: colors.red.lighten3,
         },
     },
 });
