@@ -82,6 +82,11 @@ export default {
           name: "Liv",
           role: "Sales guru",
           dpURL: "https://api.adorable.io/avatars/285/Liv.png"
+        },
+        {
+          name: "Ajoeman",
+          role: "DROP DATABASE the_bass",
+          dpURL: "https://api.adorable.io/avatars/285/Ajoeman.png"
         }
       ]
     };
