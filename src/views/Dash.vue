@@ -5,7 +5,14 @@
       <v-row class="mb-3">
         <v-tooltip top>
           <template v-slot:activator="{ on }">
-            <v-btn small flat color="grey-lighten4" class="mr-1" @click="sortBy('title')" v-on="on">
+            <v-btn
+              small
+              flat
+              color="grey-lighten4"
+              class="mr-1"
+              @click="sortBy('title')"
+              v-on="on"
+            >
               <v-icon class="left small">mdi-folder</v-icon>
               <span class="caption text-lowercase px-2">by Title</span>
             </v-btn>
@@ -29,7 +36,13 @@
           <span>Sort projects by Project Title</span>
         </v-tooltip>
       </v-row>
-      <v-card ripple="true" outlined v-for="project in projects" :key="project.title" class="pl-3">
+      <v-card
+        ripple="true"
+        outlined
+        v-for="project in projects"
+        :key="project.title"
+        class="pl-3"
+      >
         <v-layout row wrap :class="`pa-3 project ${project.status}`">
           <v-flex xs12 md6>
             <div class="caption grey--text">Project Title</div>
@@ -49,7 +62,8 @@
                 small
                 :color="`${project.status}`"
                 class="v-chip--active white--text caption my-2"
-              >{{project.status}}</v-chip>
+                >{{ project.status }}</v-chip
+              >
             </div>
           </v-flex>
         </v-layout>
@@ -95,6 +109,22 @@ export default {
           status: "overdue",
           content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
+        },
+        {
+          title: "Finish this app",
+          person: "Helios",
+          due: "22nd Apr 2020",
+          status: "ongoing",
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
+        },
+        {
+          title: "Start this app",
+          person: "Helios",
+          due: "3rd Feb 2020",
+          status: "complete",
+          content:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!"
         }
       ]
     };
@@ -126,4 +156,4 @@ export default {
 .v-chip.overdue {
   background-color: rgb(197, 130, 128);
 }
-</style> 
+</style>

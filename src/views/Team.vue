@@ -4,14 +4,14 @@
     <v-container class="my-5">
       <v-row wrap>
         <v-flex class="xs12 sm6 md4 lg3" v-show="welcome">
-          <v-card id="welcomeCard" class="ma-3 primary wrap" height="291" >
+          <v-card id="welcomeCard" class="ma-3 primary wrap" height="291">
             <v-col class="text-right align-right">
               <v-btn
                 text
                 x-small
                 class="secondary--text"
                 :ripple="false"
-                @click="welcome=!welcome"
+                @click="welcome = !welcome"
               >
                 <v-icon class>mdi-close</v-icon>
               </v-btn>
@@ -27,7 +27,11 @@
             </div>
           </v-card>
         </v-flex>
-        <v-flex class="xs12 sm6 md4 lg3" v-for="person in team" :key="person.name">
+        <v-flex
+          class="xs12 sm6 md4 lg3"
+          v-for="person in team"
+          :key="person.name"
+        >
           <v-card outlined class="ma-3">
             <v-responsive class="pt-4 text-sm-center pl-4 pl-sm-0">
               <v-avatar size="100" class="grey lighten-2">
