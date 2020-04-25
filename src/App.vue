@@ -10,15 +10,15 @@
 
 <script>
 import Navbar from "./components/Navbar";
-export default {
-  name: "App",
+  export default {
+    name: "App",
 
-  components: {
-    Navbar
-  },
-
-  data: () => ({
-    //
+    components: {
+      Navbar
+    },
+    
+    data: () => ({
+      //
   })
 };
 </script>
