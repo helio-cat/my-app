@@ -1,7 +1,7 @@
 <template>
   <nav>
     <v-app-bar app color="primary">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer" tile></v-app-bar-nav-icon>
 
       <v-toolbar-title class="text-uppercase">
         <span class="font-weight-light">Psyence</span>
@@ -10,11 +10,30 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
+      <v-menu offset-y>
+        <template v-slot:activator=" { on }">
+          <v-btn text tile v-on="on">
+            <v-icon>mdi-menu-down</v-icon>
+            <span>menu</span>
+          </v-btn>
+        </template>
+        <v-list flat color="primary white--text">
+          <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
+            <v-list-item-action>
+              <v-icon>{{ link.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title >{{ link.text }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+     
+      <v-btn icon tile>
         <v-icon>mdi-alien</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn icon tile> 
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
@@ -26,6 +45,9 @@
             <img src="https://api.adorable.io/avatars/285/Helios.png" alt />
           </v-avatar>
           <p class="white--text subheading mt-1">Helios</p>
+        </v-flex>
+        <v-flex my-3>
+          <Popup />
         </v-flex>
       </v-col>
       <v-list>
@@ -52,8 +74,15 @@
 </template>
 
 <script>
+import Popup from './Popup';
+
 export default {
   name: "navbar",
+  
+  components: {
+    Popup
+  },
+
   data() {
     return {
       drawer: false,

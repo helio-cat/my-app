@@ -37,7 +37,6 @@
         </v-tooltip>
       </v-row>
       <v-card
-        ripple="true"
         outlined
         v-for="project in projects"
         :key="project.title"
