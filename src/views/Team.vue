@@ -21,7 +21,7 @@
               <br />the team.
             </h3>
             <div class="text-sm-center pa-4">
-              <v-btn fab round class="secondary primary--text">
+              <v-btn fab rounded class="secondary primary--text">
                 <span class="headline font-weight-medium">IO</span>
               </v-btn>
             </div>

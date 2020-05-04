@@ -7,7 +7,7 @@
           <template v-slot:activator="{ on }">
             <v-btn
               small
-              flat
+              text
               color="grey-lighten4"
               class="mr-1"
               @click="sortBy('title')"
@@ -23,7 +23,7 @@
           <template v-slot:activator="{ on }">
             <v-btn
               small
-              flat
+              text
               color="grey-lighten4"
               class="mr-1"
               @click="sortBy('person')"
